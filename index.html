@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Club de Robótica del Chaco</title>
+<meta name="description" content="El Club de Robótica del Chaco acerca la programación, la electrónica y la robótica a chicas y chicos de toda la provincia.">
+<link rel="icon" href="img/simbolo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#inicio" class="brand">
+      <img src="img/logo.png" alt="Club de Robótica del Chaco" class="brand__logo">
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio" class="nav__link">Inicio</a>
+      <a href="#programas" class="nav__link">Programas</a>
+      <a href="#nosotros" class="nav__link">Nosotros</a>
+      <a href="#contacto" class="nav__link">Contacto</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href="https://forms.gle/QXibXTofvhNN8T5D9" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Sumate al club</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg" aria-hidden="true">
+      <video
+        class="hero__video"
+        poster="img/hero-bg-poster.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="none"
+      >
+        <source src="img/hero-bg.webm" type="video/webm">
+        <source src="img/hero-bg.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
+      <img src="img/planeta.png" class="hero__planet hero__planet--1" alt="">
+      <img src="img/planeta-horizontal.png" class="hero__planet hero__planet--2" alt="">
+    </div>
+
+    <div class="hero__media" data-reveal data-reveal-delay="1">
+      <img src="img/equipo-hero.png" alt="Dos chicos del club mostrando un robot armado con placa controladora y matriz de LEDs" class="hero__mascot">
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__content" data-reveal>
+        <span class="eyebrow">Club de Robótica del Chaco</span>
+        <h1 class="hero__title">
+          Formamos a las futuras ingenieras e ingenieros del Chaco
+        </h1>
+        <p class="hero__text">
+          Acercamos la programación, la electrónica y la robótica a chicas y chicos de toda la
+          provincia, con talleres abiertos, kits propios y proyectos que despiertan vocaciones
+          tecnológicas desde la infancia.
+        </p>
+        <div class="hero__actions">
+          <a href="#programas" class="btn btn--primary">Conocé los programas</a>
+          <a href="https://api.whatsapp.com/message/W2Z2WITROOALG1?autoload=1&app_absent=0&utm_source=ig" target="_blank" rel="noopener" class="btn btn--ghost">Hablar con el club</a>
+        </div>
+
+        <ul class="pill-list">
+          <li class="pill">Robótica</li>
+          <li class="pill">Programación</li>
+          <li class="pill">Electrónica</li>
+          <li class="pill">Impresión 3D</li>
+          <li class="pill">STEAM</li>
+          <li class="pill">Trabajo en equipo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA / CARRUSEL -->
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow eyebrow--dark">Así se vive el club</span>
+        <h2 class="section-title">Momentos del Club de Robótica</h2>
+        <p class="section-text">
+          Talleres, prototipos y mucho trabajo en equipo: un vistazo a lo que construimos
+          semana a semana.
+        </p>
+      </div>
+
+      <div class="fgallery" id="fgallery" data-reveal data-fgallery data-count="12">
+        <div class="fgallery__featured">
+          <img id="fgalleryFeatured" src="img/gallery2/foto-01.jpg" alt="Foto del Club de Robótica del Chaco">
+        </div>
+
+        <div class="fgallery__side">
+          <div class="fgallery__nav">
+            <button class="fgallery__arrow" id="fgalleryPrev" aria-label="Fotos anteriores">‹</button>
+            <button class="fgallery__arrow" id="fgalleryNext" aria-label="Fotos siguientes">›</button>
+          </div>
+          <div class="fgallery__grid" id="fgalleryGrid"></div>
+        </div>
+      </div>
+
+      <template id="fgalleryData">
+        <li data-src="img/gallery2/foto-01.jpg" data-alt="Chico trabajando con su notebook en el taller del club"></li>
+        <li data-src="img/gallery2/foto-02.jpg" data-alt="Chica con una figura de robot recortada en cartulina"></li>
+        <li data-src="img/gallery2/foto-03.jpg" data-alt="Grupo grande de chicas y chicos del club posando al aire libre"></li>
+        <li data-src="img/gallery2/foto-04.jpg" data-alt="Chicos armando un robot en la mesa de trabajo"></li>
+        <li data-src="img/gallery2/foto-05.jpg" data-alt="Chico modelando una pieza con lapicera 3D"></li>
+        <li data-src="img/gallery2/foto-06.jpg" data-alt="Chicas haciendo un experimento de química con tubos de ensayo"></li>
+        <li data-src="img/gallery2/foto-07.jpg" data-alt="Chico sonriendo con un robot armado sobre la mesa"></li>
+        <li data-src="img/gallery2/foto-08.jpg" data-alt="Chico observando por un microscopio"></li>
+        <li data-src="img/gallery2/foto-09.jpg" data-alt="Chica mirando de cerca un experimento con microscopio"></li>
+        <li data-src="img/gallery2/foto-10.jpg" data-alt="Robot programable conectado a una notebook"></li>
+        <li data-src="img/gallery2/foto-11.jpg" data-alt="Preparativos para una competencia de robótica al aire libre"></li>
+        <li data-src="img/gallery2/foto-12.jpg" data-alt="Chicos soldando electrónica con la punta encendida"></li>
+      </template>
+    </div>
+  </section>
+
+  <!-- PROGRAMAS -->
+  <section class="programs" id="programas">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow eyebrow--dark">Nuestro recorrido</span>
+        <h2 class="section-title">Niveles y programas del club</h2>
+        <p class="section-text">
+          Un camino progresivo para que cada chico avance a su ritmo: desde sus primeros pasos
+          en la robótica hasta el desarrollo de proyectos propios y la participación en torneos.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+
+        <article class="card" data-reveal>
+          <h3 class="card__title">Astronauta</h3>
+          <p class="card__text">
+            El primer nivel del club. Pensamiento computacional sin pantallas y armado de un
+            robot simple con material reciclado, para despertar la curiosidad por la tecnología.
+          </p>
+          <button class="card__more" data-toggle>Ver más</button>
+          <div class="card__extra" data-extra>
+            <ul class="card__tags">
+              <li>Robot de caja de papel</li>
+              <li>Nociones de mecanismos</li>
+              <li>Trabajo en equipo</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-reveal data-reveal-delay="1">
+          <h3 class="card__title">Genio</h3>
+          <p class="card__text">
+            Construyen su primer robot funcional con materiales de bajo costo, incorporando
+            ideas básicas de electricidad, engranajes y movimiento.
+          </p>
+          <button class="card__more" data-toggle>Ver más</button>
+          <div class="card__extra" data-extra>
+            <ul class="card__tags">
+              <li>Circuitos simples</li>
+              <li>Reciclado creativo</li>
+              <li>Resolución de problemas</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-reveal data-reveal-delay="2">
+          <h3 class="card__title">Ingeniero</h3>
+          <p class="card__text">
+            Se suman la electrónica y la programación: placas controladoras, sensores y
+            actuadores para resolver desafíos técnicos reales.
+          </p>
+          <button class="card__more" data-toggle>Ver más</button>
+          <div class="card__extra" data-extra>
+            <ul class="card__tags">
+              <li>Placas controladoras</li>
+              <li>Sensores y actuadores</li>
+              <li>Programación por bloques</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <h3 class="card__title">Inventor</h3>
+          <p class="card__text">
+            El nivel más avanzado: proyectos propios de robótica y programación, con
+            preparación para torneos y competencias.
+          </p>
+          <button class="card__more" data-toggle>Ver más</button>
+          <div class="card__extra" data-extra>
+            <ul class="card__tags">
+              <li>Proyectos originales</li>
+              <li>Preparación para torneos</li>
+              <li>Programación avanzada</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-reveal data-reveal-delay="1">
+          <h3 class="card__title">Materiales y kits propios</h3>
+          <p class="card__text">
+            Desarrollamos nuestro propio material pedagógico y kits de bajo costo para que
+            cada club y escuela pueda armar sus equipos.
+          </p>
+          <button class="card__more" data-toggle>Ver más</button>
+          <div class="card__extra" data-extra>
+            <ul class="card__tags">
+              <li>Guías paso a paso</li>
+              <li>Displays y sensores</li>
+              <li>Robots con material reciclado</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card card--cta" data-reveal data-reveal-delay="2">
+          <h3 class="card__title">¿Tenés una escuela o grupo interesado?</h3>
+          <p class="card__text">
+            Contanos tu propuesta y armamos juntos un taller a medida para tu comunidad
+            educativa.
+          </p>
+          <a href="#contacto" class="btn btn--primary btn--sm">Contactar al club</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="cta" id="contacto">
+    <div class="container cta__inner" data-reveal>
+      <h2 class="cta__title">Construyamos juntos la robótica del Chaco</h2>
+      <p class="cta__text">
+        Contanos tu idea, tu escuela o tu proyecto y te ayudamos a darle forma.
+      </p>
+      <a href="mailto:clubderoboticadelchaco@gmail.com" class="btn btn--gold">
+        clubderoboticadelchaco@gmail.com
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="nosotros">
+  <div class="container footer__inner">
+    <img src="img/simbolo.png" alt="" class="footer__symbol">
+    <p>© <span id="year"></span> Club de Robótica del Chaco · Educación, ciencia y tecnología para toda la provincia.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
