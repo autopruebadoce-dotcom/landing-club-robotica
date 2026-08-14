@@ -439,7 +439,7 @@ ul { list-style: none; }
   align-items: flex-end;
 }
 
-.card__bg { position: absolute; inset: 0; z-index: 0; }
+.card__bg { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: center; }
 
 .card__video {
   width: 100%;
@@ -471,7 +471,6 @@ ul { list-style: none; }
 
 @media (max-width: 720px) {
   .card--hero .card__video { display: none; }
-  .card--hero .card__bg { background: center / cover no-repeat url("../img/astronauta-bg-poster.jpg"); }
 }
 
 .card__title {
