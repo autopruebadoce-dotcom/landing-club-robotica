@@ -189,6 +189,7 @@ ul { list-style: none; }
 .hero {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
   background: var(--purple-900);
   padding: 90px 0 60px;
 }
@@ -221,6 +222,8 @@ ul { list-style: none; }
 
 @media (max-width: 960px) {
   .hero__overlay { background: rgba(30, 6, 40, 0.78); }
+  .hero__bg { bottom: auto; height: 420px; }
+  .hero__planet { display: none; }
 }
 
 .hero__planet {
@@ -235,10 +238,6 @@ ul { list-style: none; }
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-18px) rotate(4deg); }
-}
-
-@media (max-width: 960px) {
-  .hero__bg { display: none; }
 }
 
 .hero__inner {
@@ -605,7 +604,8 @@ ul { list-style: none; }
     min-height: auto;
   }
   .hero__media {
-    position: static;
+    position: relative;
+    z-index: 1;
     order: 2;
     flex: 0 0 38%;
     max-width: 170px;
