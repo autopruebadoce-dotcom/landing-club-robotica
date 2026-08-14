@@ -31,6 +31,35 @@
   --container: 1160px;
 }
 
+/* ============ Preloader ============ */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 45%, var(--purple-700), var(--purple-900) 75%);
+  transition: opacity 0.5s ease;
+}
+.preloader.is-hidden { opacity: 0; pointer-events: none; }
+
+.preloader__icon {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  color: var(--white);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+}
+.preloader__icon.is-active { opacity: 1; transform: scale(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader__icon { transition: opacity 0.2s linear; transform: none !important; }
+}
+
 /* ============ Reset ============ */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 

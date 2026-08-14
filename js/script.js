@@ -1,5 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  // Preloader: robot, lámpara, lapicera 3D, joystick, herramientas
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    const icons = Array.from(preloader.querySelectorAll(".preloader__icon"));
+    document.documentElement.style.overflow = "hidden";
+    let i = 0;
+
+    const iconInterval = setInterval(() => {
+      icons[i].classList.remove("is-active");
+      i = (i + 1) % icons.length;
+      icons[i].classList.add("is-active");
+    }, 380);
+
+    const minTime = new Promise((resolve) => setTimeout(resolve, 1900));
+    const pageLoaded = new Promise((resolve) => {
+      if (document.readyState === "complete") resolve();
+      else window.addEventListener("load", resolve, { once: true });
+    });
+
+    Promise.all([minTime, pageLoaded]).then(() => {
+      clearInterval(iconInterval);
+      preloader.classList.add("is-hidden");
+      document.documentElement.style.overflow = "";
+      setTimeout(() => preloader.remove(), 600);
+    });
+  }
+
   // Año dinámico en el footer
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
