@@ -143,20 +143,37 @@
 
       <div class="cards-grid">
 
-        <article class="card card--level" style="--accent: var(--yellow); --accent-soft: var(--yellow-soft);" data-reveal>
-          <span class="card__age">5 a 6 años</span>
-          <h3 class="card__title">Astronauta</h3>
-          <p class="card__text">
-            El primer nivel del club. Pensamiento computacional sin pantallas y armado de un
-            robot simple con material reciclado, para despertar la curiosidad por la tecnología.
-          </p>
-          <button class="card__more" data-toggle>Ver más</button>
-          <div class="card__extra" data-extra>
-            <ul class="card__tags">
-              <li>Robot de caja de papel</li>
-              <li>Nociones de mecanismos</li>
-              <li>Trabajo en equipo</li>
-            </ul>
+        <article class="card card--level card--hero" style="--accent: var(--yellow); --accent-soft: var(--yellow-soft);" data-reveal>
+          <div class="card__bg" aria-hidden="true">
+            <video
+              class="card__video"
+              poster="img/astronauta-bg-poster.jpg"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="none"
+            >
+              <source src="img/astronauta-bg.webm" type="video/webm">
+              <source src="img/astronauta-bg.mp4" type="video/mp4">
+            </video>
+            <div class="card__overlay"></div>
+          </div>
+          <div class="card__content">
+            <span class="card__age">5 a 6 años</span>
+            <h3 class="card__title">Astronauta</h3>
+            <p class="card__text">
+              El primer nivel del club. Pensamiento computacional sin pantallas y armado de un
+              robot simple con material reciclado, para despertar la curiosidad por la tecnología.
+            </p>
+            <button class="card__more" data-toggle>Ver más</button>
+            <div class="card__extra" data-extra>
+              <ul class="card__tags">
+                <li>Robot de caja de papel</li>
+                <li>Nociones de mecanismos</li>
+                <li>Trabajo en equipo</li>
+              </ul>
+            </div>
           </div>
         </article>
 

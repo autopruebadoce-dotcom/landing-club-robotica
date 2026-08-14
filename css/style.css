@@ -430,6 +430,50 @@ ul { list-style: none; }
 .card--special { border-top-color: var(--gold-500); }
 .card__age--special { background: var(--gold-500); color: var(--purple-900); }
 
+.card--hero {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.card__bg { position: absolute; inset: 0; z-index: 0; }
+
+.card__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(24, 5, 33, 0.92) 0%, rgba(24, 5, 33, 0.75) 45%, rgba(24, 5, 33, 0.35) 100%);
+}
+
+.card--hero .card__content {
+  position: relative;
+  z-index: 1;
+  padding: 28px 32px 32px;
+  width: 100%;
+}
+
+.card--hero .card__age { background: var(--accent-soft, var(--yellow-soft)); color: var(--ink); }
+.card--hero .card__title { color: var(--white); }
+.card--hero .card__text { color: rgba(255, 255, 255, 0.85); }
+.card--hero .card__more { color: var(--white); }
+.card--hero .card__tags li { color: rgba(255, 255, 255, 0.9); }
+.card--hero .card__tags li::before { background: var(--accent, var(--yellow)); }
+
+@media (max-width: 720px) {
+  .card--hero .card__video { display: none; }
+  .card--hero .card__bg { background: center / cover no-repeat url("../img/astronauta-bg-poster.jpg"); }
+}
+
 .card__title {
   font-size: 1.25rem;
   font-weight: 700;
